@@ -1,0 +1,121 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	font-color: #545454;
+	vertical-align: baseline;
+}
+
+#container {
+	padding-left: 200px;
+	padding-top: 200px;
+}
+
+#name {
+	font-size: 60px;
+	font-weight: 100;
+}
+
+#lastname {
+	font-weight: 400;
+}
+
+a, p {
+	text-decoration: none;
+	font-size:18px;
+	color: #d3d3d3;
+}
+
+/* unvisited link */
+a:link {
+    color: #9C9C9C;
+}
+
+/* visited link */
+a:visited {
+    color: #9C9C9C;
+}
+
+.email {
+	color: #9C9C9C;
+	cursor: pointer;
+	cursor: hand;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+@-webkit-keyframes counter-spin {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(-359deg);}
+}
+
+#spinner {
+	height: 400px;
+	width: 400px;
+	display: block;
+	position: absolute;
+	margin: -300px 0 0 50px;
+	pointer-events: none;
+
+	-webkit-transform: rotateZ(0) translateZ(0);
+	transition: all 300ms ease-in-out 200ms;
+}
+
+.ring {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.15;
+	pointer-events: none;
+	-webkit-transform-style: flat;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
+
+#one {
+	background-image: url(images/ring-one.png);
+	opacity: 0.1;
+	-webkit-animation-name: counter-spin;
+	-webkit-animation-delay: 1000ms;
+	-webkit-animation-duration: 30s;
+}
+
+#two {
+	background-image: url(images/ring-two.png);
+	opacity: 0.2;
+}
+
+#three {
+	background-image: url(images/ring-three.png);
+	-webkit-animation-name: spin;
+	-webkit-animation-delay: 500ms;
+	-webkit-animation-duration: 60s;
+}
+
+#aperture {
+	background-image: url(images/aperture.png);
+	opacity: 0.05;
+	-webkit-animation-name: spin;
+	-webkit-animation-delay: 1500ms;
+	-webkit-animation-duration: 75s;
+}
+
+.fade {
+   transition: color .25s ease-in-out;
+   -moz-transition: color .25s ease-in-out;
+   -webkit-transition: color .25s ease-in-out;
+   }
+
+.fade:hover {
+	color: #545454;
+}
+
+
+
+
+
